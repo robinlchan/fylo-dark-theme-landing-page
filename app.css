@@ -211,6 +211,55 @@ ul > li {
     font-size: 16px;
 }
 
+/* How Fylo Works section */
+.how-it-works-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: var(--spacing-xl) var(--spacing-xl);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.how-it-works-section .col-left {
+    display: flex;
+    width: 50%;
+}
+
+.how-it-works-section .col-right {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    text-align: left;
+    width: 50%;
+}
+
+.how-it-works-section .col-right h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.how-it-works-section .col-right p {
+    font-size: 18px;
+}
+
+.how-it-works-section .col-right a {
+    display: relative;
+    color: var(--teal);
+    transition: color 0.25s ease;
+    line-height: 35px;
+    font-size: 18px;
+    border-bottom: 2px solid var(--teal);
+    width: 31%;
+}
+
+.how-it-works-section .col-right a:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
 /* Media Queries Sizes:
 - Mobile: 375px
 - Desktop: 1440px */
