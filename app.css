@@ -1,3 +1,29 @@
-body {
-    background-color: black;
+:root {
+    /* Background colors */
+    --main-background: hsl(218, 28%, 13%);
+    --intro-email-background: hsl(217, 28%, 15%);
+    --footer-background: hsl(216, 53%, 9%);
+    --reviews-background: hsl(219, 30%, 18%);
+    /* Accent colors */
+    --teal: hsl(176, 68%, 64%);
+    --cyan: hsl(198, 60%, 50%);
+    --red: hsl(0, 100%, 63%);
+    --white: hsl(0, 0%, 100%);
+    /* Font */
+    --body-font-size: 14px;
+    --heading-font-family: "Raleway", sans;
+    --heading-font-weight-auto: 400;
+    --heading-font-weight-bold: 700;
+    --body-font-family: "Open Sans", sans;
+    --body-font-weight-auto: 400;
+    --body-font-weight-bold: 700;
+
 }
+
+body {
+    background-color: var(--main-background);
+}
+
+/* Media Queries Sizes:
+- Mobile: 375px
+- Desktop: 1440px */
