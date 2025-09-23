@@ -42,7 +42,7 @@ body {
     color: var(--white);
     width: 100%;
     margin: 0;
-    padding: var(--spacing-sm) 0 0 0;
+    padding: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -53,6 +53,7 @@ body {
 main {
     width: 100%;
     margin: var(--spacing-xl) 0 0 0;
+    padding: var(--spacing-sm) 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,8 +94,35 @@ ul > li {
 }
 
 /* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: var(--spacing-xl) var(--spacing-xl);
+    margin: 0;
+    box-sizing: border-box;
+}
 
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
 
+.menu a {
+    color: var(--white);
+    margin: 0 var(--spacing-lg);
+    font-weight: normal;
+    letter-spacing: 1px;
+    transition: color 0.25s ease;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: var(--teal);
+}
 
 /* Media Queries Sizes:
 - Mobile: 375px
