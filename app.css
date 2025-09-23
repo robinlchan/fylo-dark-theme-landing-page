@@ -16,7 +16,7 @@
     --h1-size: 45px;
     --h2-size: 35px;
     --h3-size: 25px;
-    --h5-size: 12px;
+    --h5-size: 14px;
     --body-font-family: "Open Sans", sans;
     --body-font-size: 20px;
     --body-font-weight-auto: 400;
@@ -258,6 +258,64 @@ ul > li {
 .how-it-works-section .col-right a:hover {
     opacity: 0.75;
     cursor: pointer;
+}
+
+/* Reviews section */
+.reviews-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: var(--spacing-lg);
+    text-align: left;
+    position: relative;
+    padding: calc(var(--spacing-xl)*3) var(--spacing-xl);
+}
+
+.reviews-section .card-container {
+    font-size: 16px;
+    background-color: var(--reviews-background);
+    padding: calc(var(--spacing-md)*3) var(--spacing-lg);
+}
+
+.reviews-section .card-container .profile {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: left;
+    margin-top: var(--spacing-lg);
+}
+
+.reviews-section .card-container .left {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.reviews-section .card-container .col-right {
+    width: 100%;
+}
+
+.reviews-section .card-container .profile img {
+    height: 40px;
+    border-radius: 20px;
+}
+
+.reviews-section .card-container .profile h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.reviews-section .card-container .profile p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+#quotes {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    transform: translateY(155px) translateX(55px);
 }
 
 /* Media Queries Sizes:
