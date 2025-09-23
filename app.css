@@ -13,8 +13,12 @@
     --heading-font-family: "Raleway", sans;
     --heading-font-weight-auto: 400;
     --heading-font-weight-bold: 700;
+    --h1-size: 45px;
+    --h2-size: 35px;
+    --h3-size: 25px;
+    --h5-size: 12px;
     --body-font-family: "Open Sans", sans;
-    --body-font-size: 14px;
+    --body-font-size: 20px;
     --body-font-weight-auto: 400;
     --body-font-weight-bold: 700;
     /* Spacing */
@@ -48,28 +52,41 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 main {
     width: 100%;
     margin: var(--spacing-xl) 0 0 0;
-    padding: var(--spacing-sm) 0 0 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+ 
+h1 {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight-bold);
+    font-size: var(--h1-size);
+}
 
-h1, 
-h2, 
+h2 {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight-bold);
+    font-size: var(--h2-size);
+}
+
 h3 {
     font-family: var(--heading-font-family);
     font-weight: var(--heading-font-weight-bold);
+    font-size: var(--h3-size);
 }
 
 h5 {
     font-family: var(--heading-font-family);
     font-weight: var(--heading-font-weight-bold);
+    font-size: var(--h5-size);
 }
 
 a {
@@ -122,6 +139,45 @@ ul > li {
 .menu a:hover {
     text-decoration: underline;
     color: var(--teal);
+}
+
+/* Hero */
+.hero-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 calc(var(--spacing-xl)*2) 0;
+}
+
+.hero h1 {
+    padding: var(--spacing-lg) 0;
+    width: 100%;
+    text-wrap: wrap;
+    font-weight: var(--heading-font-weight-bold);
+}
+
+.hero p {
+    width: 100%;
+    text-wrap: wrap;
+}
+
+.hero-section button {
+    margin: var(--spacing-md) 0;
+    padding: 18px 100px;
+    border-radius: 20px;
+    border: none;
+    background-image: linear-gradient(to right, var(--teal), var(--cyan));
+    color: var(--white);
+    transition: transform 0.25s ease-in-out;
+    font-size: 18px;
+}
+
+.hero-section button:hover {
+    transform: translateY(-0.25em);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--white);
+    cursor: pointer;
 }
 
 /* Media Queries Sizes:
