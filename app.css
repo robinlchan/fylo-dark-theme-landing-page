@@ -10,19 +10,91 @@
     --red: hsl(0, 100%, 63%);
     --white: hsl(0, 0%, 100%);
     /* Font */
-    --body-font-size: 14px;
     --heading-font-family: "Raleway", sans;
     --heading-font-weight-auto: 400;
     --heading-font-weight-bold: 700;
     --body-font-family: "Open Sans", sans;
+    --body-font-size: 14px;
     --body-font-weight-auto: 400;
     --body-font-weight-bold: 700;
-
+    /* Spacing */
+    --spacing-sm: 8px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 64px;
+    --standard-width: 1144px;
 }
 
+/* To prevent horizontal overflow when building responsive site */
+/* html, body {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+} */
+
+/* Body */
 body {
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight-auto);
     background-color: var(--main-background);
+    color: var(--white);
+    width: 100%;
+    margin: 0;
+    padding: var(--spacing-sm) 0 0 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+main {
+    width: 100%;
+    margin: var(--spacing-xl) 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, 
+h2, 
+h3 {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight-bold);
+}
+
+h5 {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight-bold);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+a:hover {
+    color: var(--teal);
+}
+
+p {
+    line-height: 26px;
+    font-weight: normal;
+    margin: var(--spacing-md) 0;
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+/* Navbar */
+
+
 
 /* Media Queries Sizes:
 - Mobile: 375px
