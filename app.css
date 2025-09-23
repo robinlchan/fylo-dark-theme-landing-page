@@ -180,6 +180,37 @@ ul > li {
     cursor: pointer;
 }
 
+/* Features section */
+.features-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 calc(var(--spacing-xl)*2) 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: var(--spacing-xl);
+    column-gap: calc(var(--spacing-xl)*2);
+    padding: 0 calc(var(--spacing-xl)*3);
+}
+
+.features-section .card-container img {
+    height: 60px;
+    place-self: center;
+}
+
+.features-section .card-container h3 {
+    padding: 0;
+    margin: var(--spacing-md) 0 0 0;
+}
+
+.features-section .card-container p {
+    font-size: 16px;
+}
+
 /* Media Queries Sizes:
 - Mobile: 375px
 - Desktop: 1440px */
