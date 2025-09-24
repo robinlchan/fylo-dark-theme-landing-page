@@ -143,7 +143,7 @@ ul, li {
 
 .menu a:hover {
     text-decoration: underline;
-    color: var(--teal);
+    opacity: 0.8;
 }
 
 /* Hero */
@@ -180,15 +180,17 @@ ul, li {
     padding: 18px 100px;
     border-radius: 20px;
     border: none;
-    background-image: linear-gradient(to right, var(--teal), var(--cyan));
+    background-color: var(--cyan);
     color: var(--white);
-    transition: transform 0.25s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
     font-size: 18px;
 }
 
 .hero-section button:hover {
-    transform: translateY(-0.25em);
-    box-shadow: 0 0.5em 0.5em -0.4em var(--white);
+    /* transform: translateY(-0.25em);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--white); */
+    background-color: white;
+    color: var(--cyan);
     cursor: pointer;
 }
 
@@ -259,34 +261,64 @@ ul, li {
     font-size: 18px;
 }
 
-.how-it-works-section .col-right a {
+.how-it-works-section .col-right .button-with-icon {
+    padding: 0;
+    margin: 0;
+    max-width: 185px;
     display: relative;
     color: var(--teal);
-    transition: color 0.25s ease;
+    background-color: transparent;
     line-height: 35px;
     font-size: 18px;
+    border: none;
     border-bottom: 2px solid var(--teal);
+    transition: color 0.25s ease;
     width: 31%;
+    text-align: left;
 }
 
-.how-it-works-section .col-right a:hover {
-    opacity: 0.75;
+.how-it-works-section .col-right .button-with-icon:hover {
+    text-decoration: none;
+    opacity: 0.8;
     cursor: pointer;
+}
+
+.button-with-icon > img {
+  transition: transform 0.25s ease;
+}
+
+.button-with-icon:hover > img {
+  transform: translateX(4px);
 }
 
 /* Reviews section */
 .reviews-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    column-gap: var(--spacing-lg);
-    text-align: left;
-    position: relative;
-    padding: calc(var(--spacing-xl)*3) var(--spacing-xl);
+    max-width: 100%;
+    padding: calc(var(--spacing-xl)*3) calc(var(--spacing-xl)*3);
     background-color: var(--main-background);
 }
 
-.reviews-section .card-container {
+.reviews-section .section-container {
+    width: 100%;
+    display: flex;
+    column-gap: var(--spacing-lg);
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+#quotes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-35px) translateX(-10px);
+
+}
+
+.reviews-section .section-container .card-container {
     font-size: 16px;
     background-color: var(--reviews-background);
     padding: calc(var(--spacing-md)*3) var(--spacing-lg);
@@ -327,13 +359,6 @@ ul, li {
     font-size: 12px;
 }
 
-#quotes {
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    transform: translateY(155px) translateX(55px);
-}
-
 /* Access section */
 .access-section {
     display: flex;
@@ -344,6 +369,7 @@ ul, li {
 }
 
 .access-section .card-container {
+    max-width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -379,7 +405,7 @@ ul, li {
     justify-content: flex-start;
     align-items: center;
     height: 30px;
-    padding: 30px 300px;
+    padding: 30px 200px;
     border-radius: 50px;
     box-sizing: border-box;
     font-size: 16px;
@@ -390,19 +416,22 @@ ul, li {
     justify-content: center;
     align-items: center;
     height: 30px;
-    padding: 30px 90px;
+    padding: 30px 80px;
     border-radius: 50px;
     box-sizing: border-box;
     font-size: 16px;
-    background-image: linear-gradient(to right, var(--teal), var(--cyan));
+    background-color: var(--cyan);
     color: var(--white);
     font-size: 18px;
-    transition: transform 0.25s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    text-wrap: none;
 }
 
 .access-section .card-container .get-started button:hover {
-    transform: translateY(-0.25em);
-    box-shadow: 0 0.5em 0.5em -0.4em var(--white);
+    /* transform: translateY(-0.25em);
+    box-shadow: 0 0.5em 0.5em -0.4em var(--white); */
+    background-color: white;
+    color: var(--cyan);
     cursor: pointer;
 }
 
